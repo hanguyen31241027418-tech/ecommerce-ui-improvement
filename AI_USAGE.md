@@ -1,7 +1,7 @@
 # AI Usage Log
 
 ## 1. Công cụ AI
-Tên công cụ: ChatGPT / Gemini
+Tên công cụ: Gemini
 
 ## 2. Mục đích sử dụng
 - Khảo sát và phân tích ưu/nhược điểm UI/UX của website Tiki.vn (Đóng vai chuyên gia BA).
