@@ -2,8 +2,8 @@
 
 ## 1. Giới thiệu bài tập
 - **Họ tên sinh viên:** Nguyễn Thanh Hà
-- **Môn học:** Phát triển ứng dụng Thương mại điện tử (UEH)
-- **Khu vực lựa chọn cải tiến:** Khu vực danh sách sản phẩm và thẻ sản phẩm (Product Card) kế thừa từ Buổi 1.
+- **Môn học:** Phát triển ứng dụng Thương mại điện tử
+- **Khu vực lựa chọn cải tiến:** Khu vực danh sách sản phẩm và thẻ sản phẩm từ Buổi 1.
 
 ## 2. Các kỹ thuật HTML5 & CSS3 đã thực hành
 - **HTML5 Semantic Tags:** Sử dụng `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<h2>` theo đúng thứ bậc tiêu đề và tối ưu khả năng tiếp cận (Accessibility với `aria-label`).
