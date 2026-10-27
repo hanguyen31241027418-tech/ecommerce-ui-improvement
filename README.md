@@ -16,21 +16,33 @@ Bài tập cá nhân Buổi 2 tập trung vào việc kế thừa mã nguồn Bu
   - Danh sách sản phẩm 4 cột (`.product-grid`) và Thẻ sản phẩm chi tiết (`.product-card`).
 
 ---
+## 2. MINH HỌA GIAO DIỆN TRƯỚC VÀ SAU CẢI THIỆN
 
-## 2. BƯỚC 1: RÀ SOÁT BÀI BUỔI 1 VÀ XÁC ĐỊNH NỘI DUNG CẦN CẢI THIỆN
+### Ảnh 1: Giao diện trước khi bổ sung Header & Menu (Bản ban đầu)
+> Giao diện chỉ mới có danh sách sản phẩm, phía trên cùng chưa có thanh Header/Menu điều hướng chuẩn:
 
-### 2.1 Thành phần HTML đã có từ Buổi 1
+![Giao diện chưa có Menu Header](images/before.png)
+
+### Ảnh 2: Giao diện hoàn thiện có Thanh Menu Header (ShopNhanh)
+> Giao diện sau khi thêm `<header>` và `<nav>`, áp dụng Flexbox dàn ngang Logo **ShopNhanh** và các liên kết Menu (Trang chủ, Sản phẩm, Giỏ hàng) ở góc trên bên phải:
+
+![Giao diện hoàn thiện có Thanh Menu](images/after.png)
+---
+
+## 3. BƯỚC 1: RÀ SOÁT BÀI BUỔI 1 VÀ XÁC ĐỊNH NỘI DUNG CẦN CẢI THIỆN
+
+### 3.1 Thành phần HTML đã có từ Buổi 1
 - Đã sử dụng thẻ `<article>` cho từng phần tử sản phẩm độc lập.
 - Sử dụng `<img>` để hiển thị hình ảnh và các thẻ văn bản `<strong>`, `<del>` để làm nổi bật giá bán / giá cũ.
 - Sử dụng thẻ `<button>` cho hành động "Thêm vào giỏ".
 
-### 2.2 Thành phần HTML còn thiếu hoặc chưa hợp lý
+### 3.2 Thành phần HTML còn thiếu hoặc chưa hợp lý
 - Trang bị lạm dụng các thẻ `<div>` không ngữ nghĩa cho các khu vực bố cục chính.
 - Thứ bậc tiêu đề (Heading Hierarchy) chưa đúng: Thẻ Logo sử dụng `<h2>` đặt trước `<h1>`, tiêu đề sản phẩm nhảy từ `<h1>` xuống thẳng `<h3>`.
 - Menu điều hướng chỉ là các thẻ `<a>` nằm rời rạc, chưa đưa vào cấu trúc danh sách `<ul>`, `<li>`.
 - Tiêu đề sản phẩm chưa có thẻ `<a>` để dẫn đến trang chi tiết.
 
-### 2.3 Bảng phân tích vấn đề và đề xuất cải thiện
+### 3.3 Bảng phân tích vấn đề và đề xuất cải thiện
 
 | Vấn đề phát hiện | Hướng cải thiện bằng HTML5 & CSS3 | Kết quả mong muốn |
 | :--- | :--- | :--- |
@@ -41,16 +53,16 @@ Bài tập cá nhân Buổi 2 tập trung vào việc kế thừa mã nguồn Bu
 | **Thẻ sản phẩm bị dính liền, chưa có bố cục** | Áp dụng CSS Box Model (`padding`, `margin`, `border`, `border-radius`) và CSS Grid. | Sản phẩm dàn 4 cột đều đặn, khoảng cách trực quan, dễ quan sát. |
 | **Nút thao tác chưa có phản hồi thị giác** | Bổ sung `:hover` (đổi màu nền) và `:focus-visible` (viền nổi bật). | Tăng trải nghiệm người dùng (UX) khi dùng chuột hoặc bàn phím (Tab). |
 
-### 2.4 Thứ tự thực hiện các cải tiến
+### 3.4 Thứ tự thực hiện các cải tiến
 1. **Chuẩn hóa HTML5 Semantic:** Sửa cấu trúc khung tài liệu, điều chỉnh thứ bậc tiêu đề và bọc lại menu/liên kết tên sản phẩm.
 2. **Xây dựng bố cục CSS (Flexbox & Grid):** Dàn hàng ngang Header bằng Flexbox và chia danh sách sản phẩm thành lưới 4 cột bằng Grid.
 3. **Hoàn thiện chi tiết & Trợ năng:** Thêm hiệu ứng `:hover`, `:focus-visible` và các thuộc tính `aria-label`.
 
 ---
 
-## 3. BƯỚC 2: CỦNG CỐ CẤU TRÚC HTML5 CÓ NGỮ NGHĨA
+## 4. BƯỚC 2: CỦNG CỐ CẤU TRÚC HTML5 CÓ NGỮ NGHĨA
 
-### 3.1 Mã nguồn HTML hoàn chỉnh (`index.html`)
+### 4.1 Mã nguồn HTML hoàn chỉnh (`index.html`)
 
 ```html
 <!DOCTYPE html>
@@ -183,14 +195,14 @@ Bài tập cá nhân Buổi 2 tập trung vào việc kế thừa mã nguồn Bu
 </html>
 ```
 
-### 3.2 Giải thích 3 phần tử HTML5 trọng tâm
+### 4.2 Giải thích 3 phần tử HTML5 trọng tâm
 1. **`<article>`:** Đại diện cho một đơn vị nội dung độc lập. Mỗi thẻ sản phẩm là một `<article>` chứa trọn vẹn hình ảnh, tiêu đề, đánh giá, giá cả và nút mua hàng. Nếu tách thẻ này ra đặt ở một trang khác thì thông tin vẫn có nghĩa hoàn chỉnh.
 2. **`<nav>`:** Xác định vùng chứa các liên kết điều hướng chính của website. Giúp trình đọc màn hình và công cụ tìm kiếm nhận diện khu vực điều hướng nhanh chóng.
 3. **`<h2>` (Tên sản phẩm):** Được sử dụng để tạo thứ bậc tiêu đề chuẩn mực ngay bên dưới tiêu đề trang `<h1>` ("Gợi ý hôm nay"), giúp trình đọc màn hình tạo Outline tài liệu chính xác.
 
 ---
 
-## 4. BƯỚC 3 ĐẾN BƯỚC 7: MÃ CSS HOÀN CHỈNH (`css/style.css`)
+## 5. BƯỚC 3 ĐẾN BƯỚC 7: MÃ CSS HOÀN CHỈNH (`css/style.css`)
 
 ```css
 /* --- BƯỚC 3: BIẾN CSS & CÀI ĐẶT CHUNG --- */
@@ -454,7 +466,7 @@ body {
 
 ---
 
-## 5. BƯỚC 8: BẢNG KIỂM THỬ GIAO DIỆN (TESTING CHECKLIST)
+## 6. BƯỚC 8: BẢNG KIỂM THỬ GIAO DIỆN (TESTING CHECKLIST)
 
 | STT | Nội dung kiểm tra | Kết quả | Ghi chú & Cách khắc phục |
 | :--- | :--- | :--- | :--- |
@@ -468,7 +480,7 @@ body {
 
 ---
 
-## 6. CÂU HỎI KIỂM TRA KIẾN THỨC (PHẦN 12)
+## 7. CÂU HỎI KIỂM TRA KIẾN THỨC (PHẦN 12)
 
 ### Câu 1. Trong khu vực giao diện của em, em đã sử dụng những phần tử HTML5 nào? Vì sao em chọn chúng?
 **Trả lời:** Em đã sử dụng các phần tử ngữ nghĩa bao gồm `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<h2>`, `<a>`, `<button>`, `<strong>`, và `<del>`. Em chọn chúng vì muốn tuân thủ chuẩn Semantic HTML5, giúp cấu trúc tài liệu rõ ràng, dễ bảo trì, tối ưu SEO và hỗ trợ tốt cho các thiết bị hỗ trợ trợ năng (Screen Readers).
@@ -501,7 +513,7 @@ body {
 
 ---
 
-## 7. BÁO CÁO SỬ DỤNG AI (AI USAGE REPORT)
+## 8. BÁO CÁO SỬ DỤNG AI (AI USAGE REPORT)
 
 - **Công cụ AI sử dụng:** Gemini (Google).
 - **Các prompt tiêu biểu đã sử dụng:**
