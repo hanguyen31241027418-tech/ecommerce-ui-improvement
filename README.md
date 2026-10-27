@@ -1,8 +1,7 @@
 # BÁO CÁO BÀI TẬP CÁ NHÂN - BUỔI 2: HTML5 & CSS3
 
 - **Họ tên sinh viên:** Nguyễn Thanh Hà
-- **Trường:** Đại học Kinh tế TP. Hồ Chí Minh (UEH)
-- **Môn học:** Phát triển ứng dụng Web / Thương mại điện tử
+- **Môn học:** Phát triển ứng dụng Thương mại điện tử
 - **Giảng viên hướng dẫn:** TS. Nguyễn Mạnh Tuấn
 - **Thương hiệu website:** ShopNhanh (Phát triển tiếp nối từ sản phẩm Buổi 1)
 
